@@ -1,0 +1,284 @@
+
+/*--------------------ABDUNKELUNG--------------------*/
+.black-overlay {
+  position:fixed;
+  height:100%;
+  left:0px;
+  right:0px;
+  background-color: rgba(0,0,0,0.6);
+  display:none;
+  z-index: 92;
+}
+
+.black-overlay-on {
+  display: block;
+}
+
+/*--------------------BUTTON--------------------*/
+
+.ausklappen {
+  -moz-border-bottom-colors:none;
+  -moz-border-left-colors:none;
+  -moz-border-top-colors:none;
+  -moz-border-top-colors:none;
+  background-color:rgba(255,255,255,0.75);
+  border-bottom:1.5px solid #AD1034;
+  border-image: none;
+  border-left:1.5px solid #ad1034;
+  border-radius: 0 0 10px 10px;
+  border-right: 1.5px solid #ad1034;
+  border-top: medium none !important;
+  color:#000000;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding:5px 2px;
+  position:absolute;
+  right:13px;
+  text-align:center;
+  top:0px;
+  transition:all 0.2s ease 0s;
+  width:60px;
+  z-index:2;
+}
+
+.ausklappen:hover {
+  background-color: rgba(255,255,255,0.9);
+  transition:all 0.2s;
+}
+
+.ausklappen-on {
+  top:0px;
+  transition:all 0.4s;
+}
+
+/*--------------------AUSKLAPPBARES MENU + UNTERSTRUKTUR--------------------*/
+
+.slideroff-slider {
+  position:fixed;
+  top:-300px;
+  left:0px;
+  right:0px;
+  height:50px;
+  background-color:rgba(255,255,255,1);
+  z-index:100;
+  transition:all 0.3s; 
+}
+.slideron-slider {
+  top:0px;
+  transition:all 0.3s; 
+}   
+
+.slider-show {
+  position: absolute;
+  top:0px;
+  right:0px;
+  left:0px;
+  height:100px;
+  z-index: 101;
+  background-color: black;
+}
+
+  .menupunkt {
+    font-size: 18px;
+    text-align: center;
+    width:264px;
+    float: right;
+    padding: 16px 0px;
+    border-bottom: 2px solid #ffffff;
+  }
+
+  .menupunkt:hover {
+    border-bottom: 2px solid #AD1034;
+  }
+
+  .slideroff-slider ul {
+  text-align:center;
+  display: inline;
+  margin: 0;
+  padding: 0px 4px 0px 0;
+  list-style: none;
+  float:left;
+}
+
+.slideroff-slider ul li {
+  font-size: 16px;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 13px 20px;
+  background: #fff;
+  cursor: pointer;
+  width:200px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  border-top:3px solid #ffffff;
+}
+
+.slideroff-slider ul li:hover {
+ border-top:3px solid #ad1034;
+}
+
+.slideroff-slider-hovermenu {
+  border-top:3px solid #AD1034 !important;
+}
+.slideroff-slider ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 43px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+.slideroff-slider ul li ul li { 
+  background: rgba(255,255,255,0.9); 
+  display: block; 
+  color: #000000;
+  border:none;
+}
+
+.slideroff-slider ul li ul li:hover { background: rgba(255,255,255,1); border:none; }
+.slideroff-slider ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+}
+
+.logout a {
+  color:black!important;
+  cursor: pointer!important;
+}
+
+.logout {
+  float:left;
+  width:200px;
+  font-size: 15px;
+  padding:13px 0px 0px;
+  height:35px;
+  border-top:3px solid #ffffff;
+  text-align: center;
+  transition:all 0.2s;
+  margin-left:50px; 
+
+}
+
+.logout a, a:link, a:visited {
+  color:#DDDDDD;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logout i {
+  color:#333333;
+}
+
+.logout i:hover {
+  color:#000000;
+}
+
+.slider-studium, .slider-dienstleistung {
+  position:fixed;
+  top:-200px;
+  left:0px;
+  right:0px;
+  height:50px;
+  background-color:rgba(255,255,255,0.8);
+  z-index:93;
+  transition:all 0.3s; 
+}
+
+.slideron-studium {
+  top:50px;
+  transition:all 0.3s; 
+}
+
+.slideron-dienstleistung {
+  top:50px;
+  transition:all 0.3s;
+}
+
+ .slider-studium ul, .slider-dienstleistung ul {
+  text-align:center;
+  display: inline;
+  margin: 0 auto;
+  padding: 0px 4px 0px 0;
+  list-style: none;
+  
+}
+
+.slider-studium ul li, .slider-dienstleistung ul li {
+  font-size: 16px;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 13px 20px;
+  background: rgba(255,255,255,0);
+  border-bottom:3px solid rgba(255,255,255,0);
+  cursor: pointer;
+  width:176px;
+  transition:background 2s;
+}
+
+.slider-studium ul li:hover, .slider-dienstleistung ul li:hover {
+  /*border-bottom:3px solid #fff;
+  background: rgba(255,255,255,1);*/
+  font-weight: bold;
+  transition:background 0.2s;
+}
+
+.slider-studium ul li ul, .slider-dienstleistung ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 43px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+
+.slider-studium ul li ul li, .slider-dienstleistung ul li ul li { 
+  background: rgba(255,255,255,0.8); 
+  display: block; 
+  color: #000000;
+  border:none;
+  font-weight: normal;
+}
+
+.slider-studium ul li ul li:first-child, .slider-studium ul li ul li:first-child {
+  margin-top:7px;
+}
+
+.slider-studium ul li ul li:hover, .slider-dienstleistung ul li ul li:hover {border:none;}
+.slider-studium ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+.slider-dienstleistung ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
