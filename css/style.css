@@ -1,5 +1,4 @@
-
-/*--------------------ABDUNKELUNG--------------------*/
+/*=================>> ABDUNKELUNG <<=================*/
 .black-overlay {
   position:fixed;
   height:100%;
@@ -8,37 +7,29 @@
   background-color: rgba(0,0,0,0.6);
   display:none;
   z-index: 92;
+  cursor: pointer;
 }
 
 .black-overlay-on {
   display: block;
 }
 
-/*--------------------BUTTON--------------------*/
+/*=================>> BUTTON <<=================*/
 
 .ausklappen {
-  -moz-border-bottom-colors:none;
-  -moz-border-left-colors:none;
-  -moz-border-top-colors:none;
-  -moz-border-top-colors:none;
-  background-color:rgba(255,255,255,0.75);
-  border-bottom:1.5px solid #AD1034;
-  border-image: none;
-  border-left:1.5px solid #ad1034;
+  background-color:rgba(255,255,255,0.55);
   border-radius: 0 0 10px 10px;
-  border-right: 1.5px solid #ad1034;
-  border-top: medium none !important;
   color:#000000;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  padding:5px 2px;
-  position:absolute;
-  right:13px;
+  padding:5px 16px;
+  position:fixed;
+  left:-48px;
+  margin-left: 50%;
   text-align:center;
   top:0px;
   transition:all 0.2s ease 0s;
-  width:60px;
   z-index:2;
 }
 
@@ -52,7 +43,12 @@
   transition:all 0.4s;
 }
 
-/*--------------------AUSKLAPPBARES MENU + UNTERSTRUKTUR--------------------*/
+/*=================>> AUSKLAPPBARESMENU + UNTERSTRUKTUR <<=================*/
+
+.slider-wrapper {
+  width:1088px;
+  margin: 0 auto;
+}
 
 .slideroff-slider {
   position:fixed;
@@ -64,6 +60,7 @@
   z-index:100;
   transition:all 0.3s; 
 }
+
 .slideron-slider {
   top:0px;
   transition:all 0.3s; 
@@ -106,7 +103,7 @@
   display: inline-block;
   margin-right: -4px;
   position: relative;
-  padding: 13px 20px;
+  padding: 12px 20px;
   background: #fff;
   cursor: pointer;
   width:200px;
@@ -114,7 +111,7 @@
   -moz-transition: all 0.2s;
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
-  transition: all 0.2s;
+  transition:all 0.2s;
   border-top:3px solid #ffffff;
 }
 
@@ -124,7 +121,7 @@
 
 .slideroff-slider-hovermenu {
   border-top:3px solid #AD1034 !important;
-}
+} 
 .slideroff-slider ul li ul {
   padding: 0;
   position: absolute;
@@ -145,7 +142,7 @@
 }
 .slideroff-slider ul li ul li { 
   background: rgba(255,255,255,0.9); 
-  display: block; 
+  display: block;
   color: #000000;
   border:none;
 }
@@ -156,14 +153,19 @@
   opacity: 1;
   visibility: visible;
 }
+
+.responsive-show {
+  display: block!important;
+  opacity: 1!important;
+  visibility: visible!important;
 }
 
-.logout a {
+.username a {
   color:black!important;
   cursor: pointer!important;
 }
 
-.logout {
+.username {
   float:left;
   width:200px;
   font-size: 15px;
@@ -172,26 +174,58 @@
   border-top:3px solid #ffffff;
   text-align: center;
   transition:all 0.2s;
-  margin-left:50px; 
-
+  margin-left:170px;
 }
 
-.logout a, a:link, a:visited {
+.username a, a:link, a:visited {
   color:#DDDDDD;
   cursor: pointer;
   text-decoration: none;
 }
 
-.logout i {
+.username i, .buttons i {
   color:#333333;
+  cursor: pointer;
+  font-size:21px;
 }
 
-.logout i:hover {
+.username i:hover, .buttons i:hover {
   color:#000000;
 }
 
+.close-icon {
+  position: fixed;
+  font-size:36px;
+  color:rgba(0,0,0,0.8);
+  bottom:-70px;
+  margin-left:50%;
+  left:-35px;
+  padding:20px 20px;
+  opacity: 0;
+  transition:all 0.5s;
+ /* -webkit-transform: rotateZ(190deg);  Chrome, Safari, Opera 
+  transform: rotateZ(190deg);*/
+}
+
+.close-icon-on {
+  bottom:0px;
+  opacity: 1;
+/*  -webkit-transform: rotateZ(0deg);  Chrome, Safari, Opera 
+  transform: rotateZ(0deg);*/
+  transition:all 0.5s;
+}
+
+.buttons {  
+  border-top: 3px solid #ffffff;
+  cursor: pointer;
+  font-size: 20px;
+  height: 35px;
+  padding: 10px 0px 0px;
+  
+}
+
 .slider-studium, .slider-dienstleistung {
-  position:fixed;
+  position: fixed;
   top:-200px;
   left:0px;
   right:0px;
@@ -217,7 +251,6 @@
   margin: 0 auto;
   padding: 0px 4px 0px 0;
   list-style: none;
-  
 }
 
 .slider-studium ul li, .slider-dienstleistung ul li {
@@ -281,4 +314,143 @@
   display: block;
   opacity: 1;
   visibility: visible;
+}
+
+
+
+.custom-dropdown  li {
+  background-color: rgba(255,255,255,0.5);
+}
+
+.navbar-collapse ul > li {
+  border-top:3px solid #ffffff;
+}
+
+.navbar-collapse ul > li:hover, li:focus {
+  border-top:3px solid #ad1034;
+    -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.no-border {
+  border:none!important;
+}
+
+.navbar {
+  z-index:100;
+  margin-top: -50px;
+  transition:all 0.2s;
+}
+
+.navbar-on {
+  margin-top: 0px!important;
+  transition:all 0.2s;
+}
+
+
+li > i {
+  font-size: 25px;
+}
+
+
+/*==================================================*/
+/*=================>> RESPONSIVE <<=================*/
+/*==================================================*/
+
+
+/*=================>> max 1088px <<=================*/
+
+@media screen and (max-width: 1088px) {
+
+  .slider-wrapper {
+    width:100%;
+    margin:0px;
+  }
+  
+}
+
+
+/*=================>> max 1050px <<=================*/
+
+@media screen and (max-width: 1050px) {
+
+  .username {
+    float:right;
+    margin-left:0px;
+  }
+
+  .slideroff-slider ul li:hover ul {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+
+}
+
+
+/*=================>> max 880px <<=================*/
+
+@media screen and (max-width: 880px) {
+
+  .slideroff-slider ul li {
+    width:140px;
+  }
+
+}
+
+
+/*=================>> max 760px <<=================*/
+
+@media screen and (max-width: 760px) {
+
+  .slideroff-slider ul {
+    width:100%;
+  }
+
+  .slideroff-slider ul li {
+    width:100%;
+  }
+
+  .slideroff-slider ul li ul {
+    width:100%;
+    position:relative;
+    top:20px;
+  }
+
+  .slideroff-slider ul li ul li {
+    width:100%;
+    /*margin-left:-23px;*/
+    padding:10px 0;
+  }
+
+  .username {
+    width:100%;
+    float: left;
+    background-color:#e8e8e8;
+    border-bottom:3px solid #ad1034;
+    font-size: 17px;
+  }
+
+  .username i {
+    font-size:21px !important;
+  }
+
+  .slider-dienstleistung ul li ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .slider-studium ul li ul {
+    display: block;
+    opacity:1;
+    visibility:visible;
+  }
+
+  .fa {
+    /*font-size: 32px;*/
+  }
+
 }
